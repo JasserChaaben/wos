@@ -68,7 +68,7 @@ export default function CandleGame({ onComplete }: CandleGameProps) {
               <Button
                 onClick={() => handleOptionClick(option)}
                 disabled={selectedOption !== null}
-                className={`w-full h-24 text-3xl font-bold rounded-2xl transition-all ${selectedOption === option && option === 28
+                className={`w-full h-24 text-3xl font-bold rounded-2xl transition-all ${selectedOption === option && option === 30
                   ? "bg-gradient-to-r from-green-500 to-emerald-500 scale-105"
                   : selectedOption === option
                     ? "bg-gradient-to-r from-red-400 to-red-500"
