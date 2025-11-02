@@ -16,7 +16,7 @@ export default function FavoriteWebsiteGame({ onComplete }: FavoriteWebsiteGameP
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    
+
     if (option === "Harry Potter characters viewer") {
       setTimeout(onComplete, 800);
     } else {
@@ -53,7 +53,7 @@ export default function FavoriteWebsiteGame({ onComplete }: FavoriteWebsiteGameP
             <Sparkles className="w-10 h-10 text-pink-500" />
           </div>
           <p className="text-xl md:text-2xl text-muted-foreground" data-testid="text-game4-question">
-            What's Chaimae's favorite website?
+            What's Jasser's favorite website?
           </p>
         </motion.div>
 
@@ -72,13 +72,12 @@ export default function FavoriteWebsiteGame({ onComplete }: FavoriteWebsiteGameP
               <Button
                 onClick={() => handleOptionClick(option)}
                 disabled={selectedOption !== null}
-                className={`w-full text-lg py-6 rounded-xl transition-all ${
-                  selectedOption === option && option === "Harry Potter characters viewer"
-                    ? "bg-gradient-to-r from-green-500 to-emerald-500"
-                    : selectedOption === option
+                className={`w-full text-lg py-6 rounded-xl transition-all ${selectedOption === option && option === "Harry Potter characters viewer"
+                  ? "bg-gradient-to-r from-green-500 to-emerald-500"
+                  : selectedOption === option
                     ? "bg-gradient-to-r from-red-400 to-red-500"
                     : "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-                }`}
+                  }`}
                 data-testid={`button-website-${option.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {option}

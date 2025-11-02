@@ -8,7 +8,7 @@ interface CandleGameProps {
   onComplete: () => void;
 }
 
-const options = [28, 29, 30];
+const options = [29, 30, 31];
 
 export default function CandleGame({ onComplete }: CandleGameProps) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -16,8 +16,8 @@ export default function CandleGame({ onComplete }: CandleGameProps) {
 
   const handleOptionClick = (option: number) => {
     setSelectedOption(option);
-    
-    if (option === 28) {
+
+    if (option === 30) {
       setTimeout(onComplete, 800);
     } else {
       setShake(option);
@@ -68,13 +68,12 @@ export default function CandleGame({ onComplete }: CandleGameProps) {
               <Button
                 onClick={() => handleOptionClick(option)}
                 disabled={selectedOption !== null}
-                className={`w-full h-24 text-3xl font-bold rounded-2xl transition-all ${
-                  selectedOption === option && option === 28
-                    ? "bg-gradient-to-r from-green-500 to-emerald-500 scale-105"
-                    : selectedOption === option
+                className={`w-full h-24 text-3xl font-bold rounded-2xl transition-all ${selectedOption === option && option === 28
+                  ? "bg-gradient-to-r from-green-500 to-emerald-500 scale-105"
+                  : selectedOption === option
                     ? "bg-gradient-to-r from-red-400 to-red-500"
                     : "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-                }`}
+                  }`}
                 data-testid={`button-candle-${option}`}
               >
                 {option}
