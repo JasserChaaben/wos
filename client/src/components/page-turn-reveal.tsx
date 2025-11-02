@@ -21,7 +21,7 @@ export default function PageTurnReveal() {
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" data-testid="text-reveal-message">
             Sorry I said happy birthday yesterday, it's an honest mistake
           </h1>
-          
+
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -39,7 +39,7 @@ export default function PageTurnReveal() {
             className="mt-8 flex items-center justify-center gap-2"
           >
             <p className="text-lg text-muted-foreground">
-              Just kidding! Happy Birthday!
+              Happy Birthday!
             </p>
             <PartyPopper className="w-6 h-6 text-purple-500" />
           </motion.div>
