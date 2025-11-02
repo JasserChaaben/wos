@@ -16,7 +16,7 @@ export default function NameGame({ onComplete }: NameGameProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     if (name.trim().toUpperCase() === "CHAIMAE") {
       setTimeout(onComplete, 300);
     } else {
